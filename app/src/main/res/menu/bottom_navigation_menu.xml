@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/recipes_fragment"
+        android:title="Recipes"
+        android:icon="@drawable/ic_brunch" />
+
+    <item android:id="@+id/saved_fragment"
+        android:title="Saved Recipes"
+        android:icon="@drawable/ic_favorite" />
+
+    <item android:id="@+id/search_fragment"
+        android:title="Search Recipes"
+        android:icon="@drawable/ic_search_recipe" />
+</menu>
