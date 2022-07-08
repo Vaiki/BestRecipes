@@ -11,12 +11,13 @@ import com.example.bestrecipes.api.models.Recipes
 import com.example.bestrecipes.utils.Constants
 import kotlinx.coroutines.launch
 
-class RecipeViewModel:ViewModel() {
+class RecipeViewModel : ViewModel() {
     val getRecipesLiveData = MutableLiveData<Recipes>()
-fun getResponseRecipes(query:String){
-    viewModelScope.launch {
-val response = RecipeAPI.create().getRecipes("public",query,Constants.API_ID,Constants.API_KEY)
-        if (response.isSuccessful) getRecipesLiveData.postValue(response.body())
+    fun getResponseRecipes(query: String) {
+        viewModelScope.launch {
+            val response = RecipeAPI.create()
+                .getRecipes(Constants.TYPE, query, Constants.API_ID, Constants.API_KEY)
+            if (response.isSuccessful) getRecipesLiveData.postValue(response.body())
+        }
     }
-}
 }

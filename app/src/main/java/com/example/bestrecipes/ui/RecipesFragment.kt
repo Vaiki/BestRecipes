@@ -18,7 +18,6 @@ class RecipesFragment : Fragment(R.layout.fragment_recipe) {
         viewBinding = FragmentRecipeBinding.bind(view)
 
 
-
     }
 
 
