@@ -42,16 +42,16 @@ class SearchFragment : Fragment(R.layout.fragment_search), OnKeyListener {
 
     private fun displayEmployeeList() {
 
-        viewModel.getRecipesLiveData.observe(viewLifecycleOwner, {
+        viewModel.getRecipesLiveData.observe(viewLifecycleOwner) {
             val adapter = RecipesRecyclerView(it)
             binding.rvSearchRecipe.adapter = adapter
             adapter.setOnItemClickListener {
                 findNavController().navigate(
                     R.id.action_searchFragment_to_articleFragment,
-                   bundleOf(ArticleFragment.ARTICLE_KEY to it.url)
+                    bundleOf(ArticleFragment.ARTICLE_KEY to it.url)
                 )
             }
-        })
+        }
 
     }
 

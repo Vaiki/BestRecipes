@@ -16,7 +16,7 @@ class RecipeViewModel : ViewModel() {
     fun getResponseRecipes(query: String) {
         viewModelScope.launch {
             val response = RecipeAPI.create()
-                .getRecipes(Constants.TYPE, query, Constants.API_ID, Constants.API_KEY)
+                .searchRecipes(Constants.TYPE, query, Constants.API_ID, Constants.API_KEY)
             if (response.isSuccessful) getRecipesLiveData.postValue(response.body())
         }
     }

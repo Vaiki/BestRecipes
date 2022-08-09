@@ -16,7 +16,7 @@ import retrofit2.http.Query
 interface RecipeAPI {
 
     @GET("/api/recipes/v2")
-    suspend fun getRecipes(
+    suspend fun searchRecipes(
         @Query("type") type: String,
         @Query("q") query: String,
         @Query("app_id") appId: String,
