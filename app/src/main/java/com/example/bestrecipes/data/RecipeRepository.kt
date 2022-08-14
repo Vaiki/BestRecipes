@@ -7,8 +7,6 @@ class RecipeRepository (private val recipeDao: RecipeDao){
 
     //retrofit
     suspend fun getResponseRecipes(query: String)= RecipeAPI.create().searchRecipes(Constants.TYPE, query, Constants.API_ID, Constants.API_KEY)
-
-
     //room
     val savedRecipes = recipeDao.getAllRecipes()
     suspend fun upsert(recipeData: RecipeData) = recipeDao.upsert(recipeData)

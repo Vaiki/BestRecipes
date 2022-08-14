@@ -55,7 +55,6 @@ class SearchFragment : Fragment(R.layout.fragment_search), OnKeyListener {
 
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
@@ -71,7 +70,6 @@ class SearchFragment : Fragment(R.layout.fragment_search), OnKeyListener {
                     return true
                 }
             }
-
         }
         return false
     }
