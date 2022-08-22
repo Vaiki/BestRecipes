@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_item"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+       >
+
+        <TextView
+            android:id="@+id/tv_label_recipe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Low Syn Chicken Drumsticks in a Peanut Sauce recipes"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_recipe"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_recipe"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tv_calories_serving"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_recipe"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_recipe"
+            tools:text="Calories/serving: 1750 kcal." />
+
+        <TextView
+            android:id="@+id/tv_daily_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_recipe"
+            app:layout_constraintTop_toBottomOf="@+id/tv_calories_serving"
+            tools:text="Daily value: 36%" />
+
+        <TextView
+            android:id="@+id/tv_protein"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@id/iv_recipe"
+            app:layout_constraintTop_toBottomOf="@id/tv_daily_value"
+            tools:text="Protein: 16g" />
+
+        <TextView
+            android:id="@+id/tv_carbs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@id/iv_recipe"
+            app:layout_constraintTop_toBottomOf="@id/tv_protein"
+            tools:text="Carbs: 36g" />
+
+        <TextView
+            android:id="@+id/tv_fat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@id/iv_recipe"
+            app:layout_constraintTop_toBottomOf="@id/tv_carbs"
+            tools:text="Fat: 11g" />
+
+        <TextView
+            android:id="@+id/tv_serving"
+            android:layout_width="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_recipe"
+            tools:text="Needed for 3 servings:" />
+
+        <TextView
+            android:id="@+id/tv_ingredients"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_serving"
+            tools:text="9 chicken drumsticks (all skin/fat removed)\n2 tablespoons of smooth natural peanut butter(9 syns)\n3 tablespoons of light soy sauce (or Tamari or coconut aminos)\n⅓ cup of water\n½ teaspoon of ground coriander\n½ teaspoon of ground cumin\n¼ teaspoon of chilli powder\n2 cloves of garlic, crushed\nfresh coriander" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
