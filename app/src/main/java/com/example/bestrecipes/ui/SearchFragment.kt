@@ -22,11 +22,12 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class SearchFragment : Fragment(R.layout.fragment_search), OnKeyListener {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: RecipeViewModel by viewModels()
+  private val viewModel by sharedViewModel<RecipeViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

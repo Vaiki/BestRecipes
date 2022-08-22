@@ -8,13 +8,18 @@ import androidx.navigation.ui.AppBarConfiguration
 
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.bestrecipes.ui.RecipeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
+
+    private val recipeViewModel by viewModel<RecipeViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val viewModel:RecipeViewModel by viewModel()
 
         val navView: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
         val navController = findNavController(R.id.nav_host_fragment)

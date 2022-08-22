@@ -53,7 +53,7 @@ dependencies {
     // Architectural Components
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     // for by viewModels in Fragment
-    implementation("androidx.fragment:fragment-ktx:1.4.1")
+    implementation("androidx.fragment:fragment-ktx:1.5.2")
     // for by viewModels in Activity
     implementation("androidx.activity:activity-ktx:1.4.0")
     // LiveData

@@ -8,13 +8,14 @@ import androidx.fragment.app.viewModels
 import com.example.bestrecipes.R
 import com.example.bestrecipes.databinding.FragmentArticleBinding
 import com.google.android.material.snackbar.Snackbar
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
 class ArticleFragment : Fragment(R.layout.fragment_article) {
 
     private var viewBinding: FragmentArticleBinding? = null
     private val binding get() = viewBinding!!
-    private val viewModel: RecipeViewModel by viewModels()
+    private val viewModel by sharedViewModel<RecipeViewModel>()
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
