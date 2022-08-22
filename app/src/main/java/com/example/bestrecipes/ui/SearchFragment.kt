@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bestrecipes.R
 import com.example.bestrecipes.api.models.Hit
 import com.example.bestrecipes.api.models.Recipe
+import com.example.bestrecipes.data.RecipeRepository
 import com.example.bestrecipes.databinding.FragmentSearchBinding
 import com.example.bestrecipes.ui.adapter.RecipesRecyclerView
 import kotlinx.coroutines.Job
@@ -45,11 +46,13 @@ class SearchFragment : Fragment(R.layout.fragment_search), OnKeyListener {
         viewModel.getRecipesLiveData.observe(viewLifecycleOwner) {
             val adapter = RecipesRecyclerView(it)
             binding.rvSearchRecipe.adapter = adapter
+
             adapter.setOnItemClickListener {
                 findNavController().navigate(
                     R.id.action_searchFragment_to_articleFragment,
                     bundleOf(ArticleFragment.ARTICLE_KEY to it.url)
                 )
+                viewModel.setRecipeArticle(it)
             }
         }
 

@@ -16,11 +16,7 @@
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.example.bestrecipes.ui.ArticleFragment"
-        android:label="ArticleFragment" >
-        <argument
-            android:name="article"
-            app:argType="com.example.bestrecipes.data.model_for_room.Article" />
-    </fragment>
+        android:label="ArticleFragment" />
     <fragment
         android:id="@+id/saved_fragment"
         android:name="com.example.bestrecipes.ui.SavedFragment"

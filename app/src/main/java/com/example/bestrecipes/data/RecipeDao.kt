@@ -7,12 +7,12 @@ import androidx.room.*
 interface RecipeDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(recipe:RecipeData): Long
+    suspend fun upsert(recipe:RecipeArticle): Long
 
     @Query("SELECT * FROM RECIPE_TABLE")
-    fun getAllRecipes(): LiveData<List<RecipeData>>
+    fun getAllRecipes(): LiveData<List<RecipeArticle>>
 
     @Delete
-    suspend fun deleteRecipe(recipe:RecipeData)
+    suspend fun deleteRecipe(recipe:RecipeArticle)
 
 }
